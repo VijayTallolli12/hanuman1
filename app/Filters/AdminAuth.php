@@ -26,6 +26,9 @@ class AdminAuth implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         //
+        if(!session()->get("isLoggedIn")){
+            return redirect()->to(site_url("admin/login"));
+        }
     }
 
     /**

@@ -31,6 +31,8 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+$routes->match(['get', 'post'], 'login', 'User::login', ['filter' => 'noauth']);
+$routes->match(['get', 'post'], 'admin/login', 'Admin::login', ['filter' => 'noauth']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

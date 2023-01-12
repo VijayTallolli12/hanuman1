@@ -4,8 +4,11 @@ namespace App\Validation;
 
 class Userrules
 {
-    // public function custom_rule(): bool
-    // {
-    //     return true;
-    // }
+    public function validateAdminUser(String $str, String $field, array $data)
+    {
+        $modal = new AdminModel();
+        $admin = $modal->where("email", $data['email'])->first();
+        if (!$admin) return false;        
+        return password_verify($data['password'], $admin['password']);
+    }
 }
