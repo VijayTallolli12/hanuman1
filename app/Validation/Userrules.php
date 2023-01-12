@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Validation;
+use App\Models\AdminModel;
 
 class Userrules
 {

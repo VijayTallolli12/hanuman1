@@ -2,6 +2,8 @@
 
 namespace Config;
 
+use App\Filters\AdminAuth;
+use App\Filters\AdminNoAuth;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Filters\CSRF;
 use CodeIgniter\Filters\DebugToolbar;

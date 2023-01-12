@@ -32,7 +32,7 @@
 
 <body>
     <?php
-    if ($this->session->has('isAdminLoggedIn')) {
+    if (session()->has('isAdminLoggedIn')) {
         $this->include("_adminSidebar.php");
     }
     ?>
@@ -40,7 +40,7 @@
         <?= $this->renderSection('main') ?>
     </main>
     <?php
-    if ($this->session->has('isAdminLoggedIn')) {
+    if (session()->has('isAdminLoggedIn')) {
         $this->include("_adminFooter.php");
     }
     ?>

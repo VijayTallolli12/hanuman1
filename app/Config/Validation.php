@@ -2,6 +2,7 @@
 
 namespace Config;
 
+use App\Validation\Userrules;
 use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Validation\StrictRules\CreditCardRules;
 use CodeIgniter\Validation\StrictRules\FileRules;

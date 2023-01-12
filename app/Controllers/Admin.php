@@ -30,6 +30,8 @@ class Admin extends BaseController
                 $this->setUserSession($admins);
                 return redirect()->to(base_url("admin/index"));
             }
+        }else{
+            return view("admin/login");
         }
     }
     public function logout(){
